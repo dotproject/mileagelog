@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 	global $MILEAGELOG_CONFIG;
 
@@ -224,7 +224,7 @@ function setCalendar( uts, fdate ) {
 					<td nowrap="nowrap" valign="top">
 						<input type='button' class='button' onclick='javascript:window.open("./index.php?m=mileagelog&tab=1&mid=<?=$log['mileage_log_id']?>", "_self");' value="<?=$AppUI->_('Edit')?>" />
 					</td>
-					<td nowrap="nowrap" valign="top">
+					<td nowrap="nowrap" valign="middle">
 						<?=$log_date->format($df . ' ' . $tf)?>
 					</td>
 					<td>
@@ -251,9 +251,9 @@ function setCalendar( uts, fdate ) {
 					}
 ?>					
 					</td>
-					<td valign="top" align="right"><?=$log['mileage_log_miles']?'':$log['mileage_log_od_start']?></td>
-					<td valign="top" align="right"><?=$log['mileage_log_miles']?'':$log['mileage_log_od_end']?></td>
-					<td valign="top" align="right"><?=$log['mileage_log_miles']?$log['mileage_log_miles']:$log['mileage_log_od_end']-$log['mileage_log_od_start']?></td>
+					<td valign="middle" align="right"><?=$log['mileage_log_miles']?'':$log['mileage_log_od_start']?></td>
+					<td valign="middle" align="right"><?=$log['mileage_log_miles']?'':$log['mileage_log_od_end']?></td>
+					<td valign="middle" align="right"><?=$log['mileage_log_miles']?$log['mileage_log_miles']:$log['mileage_log_od_end']-$log['mileage_log_od_start']?></td>
 				</tr>
 <?php
 			}
@@ -282,7 +282,7 @@ function setCalendar( uts, fdate ) {
 <?php
 function writeLogLine($day,$format,$purpose_string,$show_add, $user_id){
 	$day_name = $day->getDayName(false);
-	echo "<tr><td nowrap=\"nowrap\" valign=\"top\" colspan=\"".($show_add?"5":"6")."\"  style=\"background-color:#D7EAFF;\">";
+	echo "<tr><td nowrap=\"nowrap\" align=\"center\" colspan=\"".($show_add?"5":"6")."\"  style=\"background-color:#D7EAFF;\">";
 	echo "<div align=\"left\">";
 	echo "<b>".$day_name."</b> ".$day->format( $format );
 	echo "</div>";
